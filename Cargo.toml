@@ -1,5 +1,5 @@
 [package]
-name = "uuid"
+name = "uuid-cli"
 version = "0.1.0"
 authors = ["Kyle Gretchev <kgretcehv@gmail.com>"]
 
@@ -7,3 +7,6 @@ authors = ["Kyle Gretchev <kgretcehv@gmail.com>"]
 uuid = { version = "0.5.0", features = ["v4"] }
 clipboard = "0.3.0"
 clap = "2.24.1"
+
+[[bin]]
+name = "uuid"
