@@ -1,11 +1,11 @@
 extern crate clap;
-extern crate uuid;
 extern crate clipboard;
+extern crate uuid;
 
 mod cli;
 
 use uuid::Uuid;
-use clipboard::{ClipboardProvider, ClipboardContext};
+use clipboard::{ClipboardContext, ClipboardProvider};
 
 fn main() {
     let uuid = Uuid::new_v4();

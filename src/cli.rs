@@ -1,4 +1,4 @@
-use clap::{Arg, App};
+use clap::{App, Arg};
 
 pub const APP_NAME: &str = "uuid";
 pub const CLIPBOARD: &str = "clipboard";
