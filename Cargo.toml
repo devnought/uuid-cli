@@ -1,7 +1,7 @@
 [package]
 name = "uuid-cli"
 version = "0.1.0"
-authors = ["Kyle Gretchev <kgretcehv@gmail.com>"]
+authors = ["Kyle Gretchev <kgretchev@gmail.com>"]
 
 [dependencies]
 uuid = { version = "0.6.5", features = ["v4"] }
