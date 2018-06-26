@@ -4,9 +4,9 @@ version = "0.1.0"
 authors = ["Kyle Gretchev <kgretcehv@gmail.com>"]
 
 [dependencies]
-uuid = { version = "0.6.0", features = ["v4"] }
-clipboard = "0.4.4"
-clap = "2.30.0"
+uuid = { version = "0.6.5", features = ["v4"] }
+clipboard = "0.4.6"
+clap = "2.31.2"
 
 [[bin]]
 name = "uuid"

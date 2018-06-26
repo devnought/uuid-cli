@@ -4,8 +4,8 @@ extern crate uuid;
 
 mod cli;
 
-use uuid::Uuid;
 use clipboard::{ClipboardContext, ClipboardProvider};
+use uuid::Uuid;
 
 fn main() {
     let uuid = Uuid::new_v4();
