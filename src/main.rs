@@ -1,21 +1,29 @@
-extern crate clap;
+#[macro_use]
+extern crate structopt;
 extern crate clipboard;
 extern crate uuid;
 
-mod cli;
-
 use clipboard::{ClipboardContext, ClipboardProvider};
+use structopt::StructOpt;
 use uuid::Uuid;
 
-fn main() {
-    let uuid = Uuid::new_v4();
-    let matches = cli::build_cli().get_matches();
+#[derive(StructOpt, Debug)]
+#[structopt(name = "uuid")]
+struct Opts {
+    /// Copy generated UUID to clipboard
+    #[structopt(short = "c", long = "clipboard")]
+    clipboard: bool,
+}
 
-    if matches.is_present(cli::CLIPBOARD) {
+fn main() {
+    let opts = Opts::from_args();
+    let uuid = Uuid::new_v4().to_hyphenated();
+
+    if opts.clipboard {
         let mut ctx: ClipboardContext =
             ClipboardProvider::new().expect("Could not acquire a clipboard context");
 
-        ctx.set_contents(uuid.hyphenated().to_string())
+        ctx.set_contents(uuid.to_string())
             .expect("Could not copy UUID to clipboard");
     }
 

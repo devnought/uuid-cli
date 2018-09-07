@@ -1,12 +1,13 @@
 [package]
 name = "uuid-cli"
-version = "0.1.0"
-authors = ["Kyle Gretchev <kgretchev@gmail.com>"]
+version = "0.2.0"
+authors = ["Kyle Gretchev <kgretcehv@gmail.com>"]
+description = "Generate UUIDs"
 
 [dependencies]
-uuid = { version = "0.6.5", features = ["v4"] }
+uuid = { version = "0.7.0", features = ["v4"] }
 clipboard = "0.4.6"
-clap = "2.31.2"
+structopt = "0.2.10"
 
 [[bin]]
 name = "uuid"
