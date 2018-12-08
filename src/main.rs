@@ -1,8 +1,3 @@
-#[macro_use]
-extern crate structopt;
-extern crate clipboard;
-extern crate uuid;
-
 use clipboard::{ClipboardContext, ClipboardProvider};
 use structopt::StructOpt;
 use uuid::Uuid;
