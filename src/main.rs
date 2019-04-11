@@ -22,5 +22,5 @@ fn main() {
             .expect("Could not copy UUID to clipboard");
     }
 
-    println!("{}", &uuid);
+    println!("{}", uuid);
 }
