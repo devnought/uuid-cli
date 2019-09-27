@@ -8,7 +8,7 @@ edition = "2018"
 [dependencies]
 uuid = { version = "0.7", features = ["v4"] }
 clipboard = "0.5"
-structopt = "0.2"
+structopt = "0.3"
 
 [[bin]]
 name = "uuid"

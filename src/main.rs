@@ -3,10 +3,10 @@ use structopt::StructOpt;
 use uuid::Uuid;
 
 #[derive(StructOpt, Debug)]
-#[structopt(name = "uuid")]
+#[structopt(author, about)]
 struct Opts {
     /// Copy generated UUID to clipboard
-    #[structopt(short = "c", long = "clipboard")]
+    #[structopt(short, long)]
     clipboard: bool,
 }
 
