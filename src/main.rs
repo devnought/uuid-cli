@@ -1,17 +1,17 @@
+use clap::Clap;
 use clipboard::{ClipboardContext, ClipboardProvider};
-use structopt::StructOpt;
 use uuid::Uuid;
 
-#[derive(StructOpt, Debug)]
-#[structopt(author, about)]
+#[derive(Clap, Debug)]
+#[clap(author, about)]
 struct Opts {
     /// Copy generated UUID to clipboard
-    #[structopt(short, long)]
+    #[clap(short, long)]
     clipboard: bool,
 }
 
 fn main() {
-    let opts = Opts::from_args();
+    let opts = Opts::parse();
     let uuid = Uuid::new_v4().to_hyphenated();
 
     if opts.clipboard {
