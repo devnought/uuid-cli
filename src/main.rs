@@ -1,17 +1,17 @@
-use clap::Clap;
+use clap::Parser;
 use clipboard::{ClipboardContext, ClipboardProvider};
 use uuid::Uuid;
 
-#[derive(Clap, Debug)]
-#[clap(author, about)]
-struct Opts {
+#[derive(Parser, Debug)]
+#[clap(author, version, about)]
+struct Args {
     /// Copy generated UUID to clipboard
     #[clap(short, long)]
     clipboard: bool,
 }
 
 fn main() {
-    let opts = Opts::parse();
+    let opts = Args::parse();
     let uuid = Uuid::new_v4().to_hyphenated();
 
     if opts.clipboard {
@@ -22,5 +22,5 @@ fn main() {
             .expect("Could not copy UUID to clipboard");
     }
 
-    println!("{}", uuid);
+    println!("{uuid}");
 }
