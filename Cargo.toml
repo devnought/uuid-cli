@@ -13,3 +13,7 @@ uuid = { version = "0.8", features = ["v4"] }
 [[bin]]
 name = "uuid"
 path = "src/main.rs"
+
+[profile.release]
+lto = "fat"
+panic = "abort"
