@@ -12,7 +12,7 @@ struct Args {
 
 fn main() {
     let opts = Args::parse();
-    let uuid = Uuid::new_v4().to_hyphenated();
+    let uuid = Uuid::new_v4();
 
     if opts.clipboard {
         let mut ctx: ClipboardContext =
