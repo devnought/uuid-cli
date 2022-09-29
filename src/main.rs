@@ -3,10 +3,10 @@ use clipboard::{ClipboardContext, ClipboardProvider};
 use uuid::Uuid;
 
 #[derive(Parser, Debug)]
-#[clap(author, version, about)]
+#[command(author, version, about)]
 struct Args {
     /// Copy generated UUID to clipboard
-    #[clap(short, long)]
+    #[arg(short, long)]
     clipboard: bool,
 }
 
