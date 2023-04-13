@@ -1,5 +1,5 @@
 use clap::Parser;
-use clipboard::{ClipboardContext, ClipboardProvider};
+use cli_clipboard::{ClipboardContext, ClipboardProvider};
 use uuid::Uuid;
 
 #[derive(Parser, Debug)]
